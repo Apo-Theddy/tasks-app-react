@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "Outfit-Regular";
+    src: url("./assets/fonts/Outfit-VariableFont_wght.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container-all {
+    background: black;
+    width: 100%;
+    opacity: 0.4;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+}
+
+.container {
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    font-family: "Outfit-Regular";
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container-title {
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-title img {
+    margin-right: 10px;
+}
+
+.container p {
+    margin-top: 15px;
+    justify-content: end;
+}
+
+.container-description {
+    margin-bottom: 30px;
+}
+
+
+.container-tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 65vh;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.container-tasks::-webkit-scrollbar {
+    width: 0px;
+}
+
+.task {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.task h3 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.task-content {
+    width: 100%;
+}
+
+.task img {
+    padding: 8px;
+    background: whitesmoke;
+    margin-right: 20px;
+    border-radius: 15px;
+    width: 2.5rem;
+}
+
+.task img:last-child {
+    border-radius: 10px;
+    width: 35px;
+}
+
+.container-new-task {
+    margin-top: 20px;
+    width: 65vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F4E8D4;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container-new-task img {
+    margin-right: 15px;
+    padding: 10px;
+    background: #E9A23B;
+    border-radius: 10px;
+    width: 2.5rem;
+}
+
+.container-new-task:hover {
+    cursor: pointer;
+}
+
+.task-detail {
+    font-family: "Outfit-Regular";
+    z-index: 3;
+    min-height: 95%;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    background: white;
+    width: 90%;
+    max-height: 95%;
+    padding: 10px;
+    transition: all 500ms;
+}
+
+.task-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-detail-header img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.task-detail-name {
+    font-family: "Outfit-Regular";
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid rgba(102, 102, 102, 0.514);
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.task-detail p {
+    color: #a0a4aa;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.task-detail-description {
+    width: 100%;
+}
+
+.task-detail-description textarea {
+    font-family: "Outfit-Regular";
+    border: 1px solid rgba(102, 102, 102, 0.514);
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    outline: none;
+}
+
+.task-detail-icons ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+}
+
+.task-detail-icons ul li {
+    display: flex;
+    align-items: center;
+    width: 3rem;
+}
+
+
+.task-detail ul li img {
+    padding: 10px;
+    border-radius: 10px;
+    background: #E3E9EE;
+    width: 40px;
+    cursor: pointer;
+}
+
+.task-detail ul li img::selection {
+    background: red;
+}
+
+.task-detail .selected {
+    background: #EDD16A;
+}
+
+
+.container-status ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    gap: 10px;
+}
+
+.status {
+    border: 2px solid rgba(179, 179, 179, 0.636);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.status img {
+    margin-right: 10px;
+}
+
+.status p {
+    display: inline;
+    color: black;
+    background: red;
+}
+
+.selected-type {
+    border: 2px solid #3762E2;
+    border-radius: 15px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.selected-type img {
+    border: none;
+    margin-right: 10px;
+}
+
+.selected-type p {
+    display: inline;
+    color: black;
+    margin-left: 10px;
+}
+
+.selected-type img:last-child {
+    background: none;
+}
+
+.spacer {
+    width: 55%;
+}
+
+.action-buttons {
+    margin-top: 10rem;
+    display: flex;
+    gap: 20px;
+    align-items: end;
+    justify-content: end;
+}
+
+.action-buttons input {
+    font-family: "Outfit-Regular";
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.action-delete {
+    height: 2rem;
+    cursor: pointer;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #96A3B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-delete img {
+    width: 25px;
+    height: 20px;
+}
+
+.action-save {
+    height: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    background: #3762E2;
+    display: flex;
+}
+
+.action-save img {
+    margin-left: 5px;
+    width: 25px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .action-buttons {
+        margin-top: 3rem;
+        height: 9rem;
+    }
+}
+
+@media (min-width:1000px) {
+    .task-detail {
+        width: 40%;
+    }
+}
